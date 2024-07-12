@@ -33,7 +33,7 @@ static int __init hello_world_init(void)
         pr_info("Major = %d Minor = %d \n",MAJOR(dev), MINOR(dev));
  
         /*Creating struct class*/
-        dev_class = class_create(THIS_MODULE,"etx_class");
+        dev_class = class_create("etx_class");
         if(IS_ERR(dev_class)){
             pr_err("Cannot create the struct class for device\n");
             goto r_class;
